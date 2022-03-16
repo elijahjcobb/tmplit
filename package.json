@@ -1,0 +1,47 @@
+{
+	"name": "tmplit",
+	"version": "0.1.0",
+	"description": "A file template manager with variables and a CLI.",
+	"keywords": ["template", "cli", "variable"],
+	"main": "js/index",
+	"types": "dts/index",
+	"files": [
+		"js",
+		"dts"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepublishOnly": "npm run compile",
+		"compile": "npm run clean && /usr/local/bin/tsc -p tsconfig.json",
+		"watch": "tsc -w -p .",
+		"clean": "rm -rf js && rm -rf dts",
+		"start": "node js/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/elijahjcobb/***.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": "Elijah Cobb <elijah@elijahcobb.com> (https://elijahcobb.com/)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/elijahjcobb/***/issues"
+	},
+	"homepage": "https://github.com/elijahjcobb/***#readme",
+	"dependencies": {
+		"@types/inquirer": "^8.2.0",
+		"@types/mustache": "^4.1.2",
+		"change-case": "^4.1.2",
+		"inquirer": "^8.2.0",
+		"mustache": "^4.2.0"
+	},
+	"devDependencies": {
+		"@types/jest": "latest",
+		"@types/node": "latest",
+		"jest": "latest",
+		"tslint": "latest",
+		"typescript": "latest"
+	}
+}
